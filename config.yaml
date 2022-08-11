@@ -1,0 +1,131 @@
+mapping_methods:
+    - mnn
+
+environments:
+    #MULTIseq: MULTIseq
+    #CreateSeurat: ModelSystems10x
+    #integration: ModelSystems10x
+    MULTIseq: basic_renv
+    CreateSeurat: basic_renv
+    integration: basic_renv
+
+samples:
+    gastr_d3:
+        - ''
+    gastr_d4:
+        - ''
+    MULTI/exp1_d5:
+        - 'sample1_'
+        - 'sample2_'
+        - 'sample3_'
+    #MULTI/exp2A_d3_d3.5:
+    #    - 'sample1_'
+    #    - 'sample2_'
+    #    - 'sample3_'
+    #MULTI/exp2C_d3_d3.5:
+    #    - 'sample1_'
+        #- 'sample2_'
+        #- 'sample3_'
+    #MULTI/exp2D_d3_d3.5:
+    #    - 'sample1_'
+    #    - 'sample2_'
+    #MULTI/exp3A_d4_d4.5:
+    #    - 'sample1_'
+    #    - 'sample2_'
+    #    - 'sample3_'
+    MULTI/exp3B_d4_d4.5:
+        #- 'sample1_'
+        - 'sample2_'
+        - 'sample3_'
+    MULTI/exp3C_d4_d4.5:
+        - 'sample1_'
+        - 'sample2_'
+    MULTI/exp4_d3:
+        - 'sampleA_'
+        - 'sampleB_'
+    MULTI/exp5_d3.5_d4:
+        - 'sampleA_'
+        - 'sampleB_'
+        - 'sampleC_'
+        - 'sampleD_'
+    MULTI/exp6_d4.5_d5:
+        - 'sampleA_'
+        - 'sampleB_'
+        - 'sampleC_'
+
+samples_MULTI:
+    MULTI/exp1_d5:
+        - sample1_
+        - sample2_
+        - sample3_
+    #MULTI/exp2A_d3_d3.5:
+    #    - sample1_
+    #    - sample2_
+    #    - sample3_
+    #MULTI/exp2C_d3_d3.5:
+    #    - sample1_
+    #    - sample2_
+    #    - sample3_
+    #MULTI/exp2D_d3_d3.5:
+    #    - sample1_
+    #    - sample2_
+    #MULTI/exp3A_d4_d4.5:
+    #    - sample1_
+    #    - sample2_
+    #    - sample3_
+    MULTI/exp3B_d4_d4.5:
+        #- sample1_
+        - sample2_
+        - sample3_
+    #MULTI/exp3C_d4_d4.5:
+    #    - sample1_
+    #    - sample2_
+    MULTI/exp4_d3:
+        - sampleA_
+        - sampleB_
+    MULTI/exp5_d3.5_d4:
+        - sampleA_
+        - sampleB_
+        - sampleC_
+        - sampleD_
+    MULTI/exp6_d4.5_d5:
+        - sampleA_
+        - sampleB_
+        - sampleC_
+
+scripts:
+    CreateSeurat: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/create_seurat.R
+    InferBCs: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/infer_barcodes.R
+    MULTIBarAlign: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/barcode_align.R
+    MULTIAssignCells: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/classify_cells.R
+    MergePreprocessed: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/merge.R
+    JointQC: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/joint_QC.R
+    Mapping:
+        Original: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/mapping/mapping_mnn_originalAtlas.R
+        Extended: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/mapping/mapping_mnn_extendedAtlas.R
+    Plotting: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/evaluating/plotting.R
+
+directories:
+    base: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/data_dir/
+    extension: data/
+    output: processed_files_Leah/scRNAseq/
+    atlas:
+        Original: /nfs/research/marioni/Leah/data/gastrulation10x/data/Leah/
+        Extended: /nfs/research/marioni/Leah/data/gastrulation10x/data/Extended/
+
+settings:
+    Processing: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/processing/settings.R
+    Mapping: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/mapping/settings.R
+    Plotting: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/evaluating/settings.R
+    MappingFunctions: /nfs/research/marioni/Leah/gastrulation_epigenetics/gastruloid_characterisation/gastruloids_scRNAseq/pipeline/mapping/mapping_functions.R
+
+
+
+
+
+
+
+
+
+
+
